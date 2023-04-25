@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build:
     runs-on: kali-linux/latest
-
+    working-directory: _work
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
