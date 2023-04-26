@@ -1,16 +1,13 @@
 name: Bash script example
 
-on: [push]
+on: 
+  push:
+    branches:
+      - master
 
 jobs:
   build:
-    runs-on: kali-linux/latest
-    
+  runs-on: self-hosted
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Run Bash script
-        run: |
-          #!/bin/bash
-          echo "puuuuush"
+      - name: Run a one-line script
+        run: echo "Hello, actions!"
