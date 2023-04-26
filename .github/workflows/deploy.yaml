@@ -21,6 +21,10 @@ jobs:
         run: npm install
       - name: Stop previous app
         run: sudo systemctl stop expressTest.service
+      - name: Delete old files
+        run: sudo rm -rf /home/kali/deploy
+      - name: Create deploy directory
+        run: sudo mkdir /home/kali/deploy
       - name: Copy files
         run: sudo cp -r . /home/kali/deploy
       - name: Start app
