@@ -6,6 +6,12 @@ on:
       - master
 
 jobs:
+  echopush:
+    runs-on: self-hosted
+    steps:
+      - name: Log Task Done
+        run: echo "task done"
+
   deploy:
     runs-on: self-hosted
     steps:
