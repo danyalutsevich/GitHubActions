@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   log-task-done:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Log Task Done
         run: echo "task done"
