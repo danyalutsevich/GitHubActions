@@ -1,9 +1,12 @@
 name: Example Action
 
-on: [push]
+on: 
+  push:
+    branches:
+      - master
 
 jobs:
-  log-task-done:
+  deploy:
     runs-on: self-hosted
     steps:
       - name: Log Task Done
