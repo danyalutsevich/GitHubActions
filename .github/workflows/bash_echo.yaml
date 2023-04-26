@@ -1,11 +1,10 @@
-name: Bash script example
+name: Example Action
 
-on: 
-  push:
-    branches:
-      - master
+on: [push]
 
 jobs:
-  build:
-  runs-on: self-hosted
-    - run: echo "Hello, actions!"
+  log-task-done:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log Task Done
+        run: echo "task done"
